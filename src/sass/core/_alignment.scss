@@ -1,0 +1,17 @@
+@mixin text-alignment($direction) {
+  text-align: $direction;
+}
+
+@mixin add-flex($display: '', $flex-wrap: '', $align-self: '', $align-items: '',
+                $align-content: '', $flex-direction: '', $justify-content: '',
+                $justify-self: '') {
+
+    @include addIfNotNull(display, $display);
+    @include addIfNotNull(flex-wrap, $flex-wrap);
+    @include addIfNotNull(align-self, $align-self);
+    @include addIfNotNull(align-items, $align-items);
+    @include addIfNotNull(justify-self, $justify-self);
+    @include addIfNotNull(align-content, $align-content);
+    @include addIfNotNull(flex-direction, $flex-direction);
+    @include addIfNotNull(justify-content, $justify-content);
+}

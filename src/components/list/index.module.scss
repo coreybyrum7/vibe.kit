@@ -1,0 +1,15 @@
+.List {
+  list-style: none;
+  padding-inline-start: calc(var(--size-6) + var(--size-1));
+  @include margin($top: 0, $bottom: 0);
+
+  li {
+    line-height: 1.2em;
+    @include font(3, 300);
+    @include padding($bottom: 3);
+  }
+
+  &--skills {
+    @include padding($top: 2, $left: 0);
+  }
+}

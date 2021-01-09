@@ -1,0 +1,11 @@
+.Box {
+  @for $i from 1 through 8 {
+    &--#{$i} {
+      grid-column: span #{$i};
+    }
+  }
+
+  &__align_vertically {
+    @include add-flex($display: flex, $justify-content: center, $flex-direction: column);
+  }
+}

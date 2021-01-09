@@ -1,0 +1,21 @@
+.Icon {
+  width: var(--space-5);
+  height: var(--space-4);
+
+  @include margin($right: 4);
+
+  &--skills {
+    width: var(--space-8);
+    height: var(--space-6);
+  }
+
+  &--interests {
+    width: var(--space-9);
+    height: var(--space-9);
+    border: 1px solid black;
+    border-radius: 100%;
+
+    @include padding($all: 4);  
+    @include margin($right: 4);
+  }
+}

@@ -1,0 +1,29 @@
+.TextBlock {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.2em;
+
+  @for $i from 1 through 14 {
+    &--size-#{$i} {
+      @include font-size($i);
+    }
+
+    &--spacing-#{$i} {
+      @include padding($bottom: $i);
+    }
+  }
+
+  &--weight {
+    &-light {
+      @include font-weight(200);
+    }
+
+    &-normal {
+      @include font-weight(300);
+    }
+
+    &-bold {
+      @include font-weight(700);
+    }
+  }
+}

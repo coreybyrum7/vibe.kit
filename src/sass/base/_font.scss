@@ -1,0 +1,57 @@
+:root {
+  --text-0: 0.571rem;
+  --text-1: 0.714rem;
+  --text-2: 1.2rem;
+  --text-3: 1.44rem;
+  --text-4: 1.2rem;
+  --text-5: 1.44rem;
+  --text-6: 1.728rem;
+  --text-7: 2.074rem;
+  --text-8: 2.488rem;
+  --text-9: 2.986rem;
+  --text-10: 3.583rem;
+  --text-11: 4.280rem;
+  --text-12: 4.978rem;
+  --text-13: 5.483rem;
+  --text-14: 6.120rem;
+
+  @include get-min-width-breakpoint(tablet) {
+    --text-2: 0.857rem;
+    --text-3: 1rem;
+    --text-4: 1.25rem;
+    --text-5: 1.563rem;
+    --text-6: 1.953rem;
+    --text-7: 2.441rem;
+    --text-8: 3.052rem;
+    --text-9: 3.815rem;
+    --text-10: 4.768rem;
+    --text-11: 5.618rem;
+    --text-12: 6.585rem;
+    --text-13: 7.289rem;
+    --text-14: 8.012rem;
+  }
+
+  @include get-min-width-breakpoint(desktop-medium) {
+    --text-0: 0.625rem;
+    --text-1: 0.75rem;
+    --text-2: 0.875rem;
+    --text-3: 1rem;
+    --text-4: 1.25rem;
+    --text-5: 1.563rem;
+    --text-6: 1.953rem;
+    --text-7: 2.441rem;
+    --text-8: 3.052rem;
+    --text-9: 3.815rem;
+    --text-10: 4.768rem;
+    --text-11: 5.918rem;
+    --text-12: 7.185rem;
+    --text-13: 8.089rem;
+    --text-14: 8.910rem;
+  }
+
+  @include get-min-width-breakpoint(desktop-large) {
+    --text-0: 0.6rem;
+    --text-1: 0.7rem;
+    --text-2: 0.8rem;
+  }
+}

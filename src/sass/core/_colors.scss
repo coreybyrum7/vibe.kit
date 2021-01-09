@@ -1,0 +1,40 @@
+@function color($name) {
+  @return var(--color-#{$name});
+}
+
+$satinBlue: #0072ce;
+$brightBlue: #00a2ff;
+$deviceBlack: #1f1f1f;
+$trueBlack: #000000;
+$white: #ffffff;
+$midSilver: #eeeeee;
+$darkGrey: #363636;
+$textGrey: #707070;
+$textLightGrey: #a8a8a8;
+$lightSilver: #f5f5f5;
+$highlightBlue: #f6fbff;
+$keylineGrey: #dedede;
+$keylineDarkGrey: #363636;
+$actionOrange: #d53b00;
+$successGreen: #00a088;
+$errorRed: #e9546f;
+$warningPink: #f186cb;
+$plusYellow: #fdd800;
+$plusYellowDark: #4d4000;
+$playstationBlue: #00439c;
+$youtubeRed: #d9252a;
+
+// Transparent //
+$transparent: rgba(255, 255, 255, 0);
+$transparentLight: rgba(255, 255, 255, 0.5);
+$transparentWhite: rgba(255, 255, 255, 0.1);
+$transparentDark: rgba(31, 31, 31, 0.85);
+$transparentDarkFull: rgba(31, 31, 31, 0);
+$transparentBlack: rgba(0, 0, 0, 0.08);
+$transparentBlackLight: rgba(0, 0, 0, 0.03);
+
+// Symbol Colors //
+$triangleGreen: #39bb9d;
+$circleRed: #f15a38;
+$crossBlue: #98a5d4;
+$squarePink: #d191c0;
