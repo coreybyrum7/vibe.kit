@@ -2,14 +2,14 @@ import styles from './index.module.scss';
 import { Section } from 'src/components'
 
 export interface SandboxProps {
-  isVisible: boolean;
+  visible: boolean;
 }
 
 export const Sandbox: React.FC<SandboxProps> = (props) => {
-  const { isVisible } = props;
+  const { visible } = props;
   
   return (
-    isVisible &&
+    visible &&
     <Section className={styles.Sandbox} id="Sandbox">
       Sandbox section
     </Section>

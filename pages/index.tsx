@@ -4,9 +4,7 @@ import { Nav, Footer, Sandbox, Welcome, Projects } from 'src/sections';
 import styles from '../styles/Home.module.scss'
 
 export default function Home() {
-  const [welcomeVisible, setWelcomeVisible] = useState(true);
-  const [sandboxVisible, setSandboxVisible] = useState(false);
-  const [projectsVisible, setProjectsVisible] = useState(false);
+  const [ activeSection, setActiveSection ] = useState('home');
   
   return (
     <div className={styles.Container}>
@@ -17,13 +15,11 @@ export default function Home() {
 
       <main className={styles.Main}>
         <Nav
-          setWelcomeVisible={setWelcomeVisible}
-          setSandboxVisible={setSandboxVisible}
-          setProjectsVisible={setProjectsVisible}
+          setActiveSection={setActiveSection}
         />
-        <Welcome isVisible={welcomeVisible} />
-        <Sandbox isVisible={sandboxVisible} />
-        <Projects isVisible={projectsVisible} />
+        <Sandbox visible={activeSection == 'sandbox' ? true : false} />
+        <Projects visible={activeSection == 'projects' ? true : false} />
+        <Welcome visible={activeSection == 'home' ? true : false} />
       </main>
 
       <footer className={styles.Footer}>

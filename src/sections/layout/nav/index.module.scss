@@ -1,83 +1,19 @@
 .Nav {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     box-shadow: rgba(0,0,0,0.12) 0px 2px 20px 0px;
     width: 100%;
     border-radius: 0;
 
-    @include padding($y: 2, $x: 8);
+    @include padding($y: 0, $x: 4);
     @include margin($top: 0, $bottom: 6);
 
 
     @include get-min-width-breakpoint(tablet) {
         width: 60%;
         border-radius: 3rem;
-
+        
+        @include padding($y: 0, $x: 8);
         @include margin($y: 6, $x: auto);
-    }
-
-    a {
-        opacity: .6;
-        cursor: pointer;
-
-        @include padding($y: 3, $x: 5);
-
-        &:first-child {
-            @include padding($left: 0);
-        }
-
-        &:not(:last-child) {
-            @include padding($right: 6);
-        }
-
-        &:hover {
-            opacity: 1;
-        }
-
-        &.Nav_active {
-            color: #000;
-            opacity: 1;
-        }
-    }
-
-    &_left,
-    &_center,
-    &_right {
-        @include add-flex($display: flex, $flex-direction: row, $align-items: center);
-    }
-
-    &_left {
-        justify-content: flex-start;
-    }
-
-    &_center {
-        justify-content: center;
-
-        a {
-            @include padding($all: 0);
-        }
-
-        svg {
-            height: 3rem;
-            width: 3rem;
-
-            &:hover {
-                transform: scale(1.1);
-                transition-duration: .25s;
-                transition-timing-function: ease-out;
-                cursor: pointer;
-            }
-        }
-    }
-
-    &_right {
-        justify-content: flex-end;
-
-        a {
-            &:last-child {
-                background: #e3e3e3;
-                border-radius: 3rem;
-            }
-        }
     }
 }

@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className={styles.Footer__icon}>
         <FaReact />
       </div>
-      <div className={styles.Footer__copy}>Created with React.js</div>
+      <div className={styles.Footer__copy}>Built with Next.js</div>
     </div>
   )
 }

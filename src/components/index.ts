@@ -8,3 +8,5 @@ export * from './text-block';
 export * from './icon';
 export * from './list';
 export * from './hero-video';
+export * from './nav-link';
+export * from './accordion';

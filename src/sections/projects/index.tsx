@@ -3,14 +3,14 @@ import styles from './index.module.scss';
 import { Section } from 'src/components'
 
 export interface ProjetProps {
-  isVisible: boolean;
+  visible: boolean;
 }
 
 export const Projects: React.FC<ProjetProps> = (props) => {
-  const { isVisible } = props;
+  const { visible } = props;
 
   return (
-    isVisible &&
+    visible &&
     <Section id="projects">
       <div className={styles.Projects}>
         Projects Section
