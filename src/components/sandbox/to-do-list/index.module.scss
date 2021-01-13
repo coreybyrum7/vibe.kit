@@ -6,7 +6,7 @@
         width: 60%;
         margin: 0 auto;
 
-        @include padding($y: 4, $x: 6);
+        @include padding($all: 6);
     }
 
     &_item {
@@ -44,7 +44,7 @@
         &_add {
             @include add-flex ($display: inline-flex, $flex-direction: column, $align-items: center);
 
-            @include padding($bottom: 4);
+            @include padding($bottom: 5);
         }
 
 
