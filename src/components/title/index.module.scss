@@ -14,16 +14,24 @@
   }
 
   &--weight {
-    &-light {
+    &-200 {
       @include font-weight(200);
     }
 
-    &-normal {
+    &-300 {
       @include font-weight(300);
     }
 
-    &-bold {
-      @include font-weight(700);
+    &-400 {
+      @include font-weight(400);
+    }
+
+    &-500 {
+      @include font-weight(400);
+    }
+
+    &-600 {
+      @include font-weight(600);
     }
   }
 

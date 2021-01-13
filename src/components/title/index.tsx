@@ -3,7 +3,7 @@ import styles from './index.module.scss'
 
 export interface TitleProps {
     size: number;
-    weight?: 'light' | 'normal' | 'bold';
+    weight?: '200' | '300' | '400' | '500' | '600';
     alignment?: 'left' | 'center' | 'right';
     spacing?: number;
     color?: string;

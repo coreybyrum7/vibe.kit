@@ -9,6 +9,7 @@ import Travel from 'src/assets/svg/travel.svg';
 import JS from 'src/assets/svg/js.svg';
 import CSS from 'src/assets/svg/css.svg';
 import Settings from 'src/assets/svg/settings.svg';
+import Tick from 'src/assets/svg/tick.svg';
 
 export interface IconProps {
   name: string;
@@ -31,6 +32,7 @@ export const Icon: React.FC<IconProps> = ({ name, className }) => {
         : name == "JS" ? <JS />
         : name == "CSS" ? <CSS />
         : name == "Settings" ? <Settings />
+        : name == "Tick" ? <Tick />
         : null
       }
     </div>

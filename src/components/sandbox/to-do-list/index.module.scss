@@ -1,0 +1,123 @@
+.ToDoList {
+    &_wrapper {
+        border: 1px solid #ededed;
+        border-radius: 2px;
+        box-shadow: rgba(0, 0, 0, 0.025) 0px 2px 7px 0px;
+        width: 60%;
+        margin: 0 auto;
+
+        @include padding($y: 4, $x: 6);
+    }
+
+    &_item {
+        @include padding($y: 4, $x: 0);
+        @include add-flex($display: flex, $flex-direction: row);
+
+        &_deleteBtn {
+            cursor: pointer;
+            border: .020rem solid #e0e0e0;
+            border-radius: 100%;
+            width: 20px;
+            height: 20px;
+
+            @include margin($right: 4);
+
+            &:hover {
+                border-color: green;
+            }
+        }
+
+        &_name {
+            opacity: .7;
+            animation: fade 1s linear;
+
+            @include padding($top: 1);
+        }
+    }
+    
+    &_form {
+        &_add,
+        &_edit {
+            width: 100%;
+        }
+
+        &_add {
+            @include add-flex ($display: inline-flex, $flex-direction: column, $align-items: center);
+
+            @include padding($bottom: 4);
+        }
+
+
+        &_edit {
+            @include add-flex($display: flex, $flex-direction: row);
+
+            input {
+                text-align: left;
+                opacity: .7;
+
+                @include padding($top: 1, $bottom: 2, $x: 0);
+            }
+
+            button {
+                background: #fff;
+                color: #ff385c;
+                border-radius: 1rem;
+                border: 1px solid #e2e2e2;
+                cursor: pointer;
+
+                @include margin($left: 5);
+                @include padding($y: 2, $x: 6);
+
+                &:hover {
+                    background: #ff385c;
+                    color: #fff;
+                }
+
+                &:last-child {
+                    @include margin($left: 2);
+
+                    &:hover {
+                        background: #f2f2f2;
+                        color: #ff385c;
+                    }
+                }
+            }
+        }
+
+        &_input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #e2e2e2;
+            background: #fff;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 2px 10px 0px;
+            text-align: center;
+            color: #000;
+                        
+            @include font($size: 3, $weight: 300);
+            @include padding($y: 2, $x: 4);
+        }
+
+        &_submitBtn {
+            background: #ff385c;
+            border: none;
+            color: #fff;
+            border-radius: 1rem;
+            box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 10px 0px;
+            cursor: pointer;
+
+            @include font($size: 2, $weight: 300);
+            @include margin($top: 4);
+            @include padding($y: 2, $x: 6);
+
+            &:hover {
+                background: #f71e46;
+                box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 10px 0px;
+            }
+        }
+    }
+}
+
+@keyframes fade {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+  }

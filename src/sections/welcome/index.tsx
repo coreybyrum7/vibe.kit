@@ -24,7 +24,7 @@ export const Welcome: React.FC<WelcomeProps> = (props) => {
           >
             <Title 
               size={10}
-              weight="normal"
+              weight="400"
               alignment="center"
               color="white"
             >
