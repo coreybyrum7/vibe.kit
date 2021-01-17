@@ -9,14 +9,23 @@ export interface ToDoListProps {
 
 export const ToDoList:React.FC<ToDoListProps> = () => {
     const [items, setItems] = useState([]);
+    const [completedItems, setCompletedItems] = useState([]);
     const [itemEditing, setItemEditing] = useState('');
 
     // Upon component mount, get items from local storage
     useEffect(() => {
         const json = localStorage.getItem("items");
         const savedItems = JSON.parse(json);
+
+        const jsonCompletedItems = localStorage.getItem("completedItems");
+        const savedCompletedItems = JSON.parse(jsonCompletedItems);
+
         if (savedItems) {
             setItems(savedItems);
+        }
+
+        if (savedCompletedItems) {
+            setCompletedItems(savedCompletedItems);
         }
     }, []);
 
@@ -25,6 +34,12 @@ export const ToDoList:React.FC<ToDoListProps> = () => {
         const json = JSON.stringify(items);
         localStorage.setItem("items", json);
     }, [items]);
+
+    // When updating completed items, save to local storage
+    useEffect(() => {
+        const json = JSON.stringify(completedItems);
+        localStorage.setItem("completedItems", json);
+    }, [completedItems]);
 
     const addItem = (e) => {
         e.preventDefault();
@@ -36,10 +51,12 @@ export const ToDoList:React.FC<ToDoListProps> = () => {
         setItems([newItem, ...items]);
     }
 
-    const deleteItem = (id) => {
+    const completeItem = (id) => {
         const filteredItems = items.filter(item => {
             if (item.id !== id) { 
                 return item;
+            } else {
+                setCompletedItems([item, ...completedItems])
             }
         });
         setItems(filteredItems);
@@ -78,8 +95,8 @@ export const ToDoList:React.FC<ToDoListProps> = () => {
                 {items.map((item) => (
                     <div key={item.id} className={styles.ToDoList_item}>
                         <div 
-                            className={styles.ToDoList_item_deleteBtn} 
-                            onClick={() => deleteItem(item.id)}
+                            className={styles.ToDoList_item_completeBtn} 
+                            onClick={() => completeItem(item.id)}
                         ></div>
                         {itemEditing === item.id ?
                             <form className={styles.ToDoList_form_edit} onSubmit={(e) => editItems(e, item.id)}>
@@ -93,6 +110,20 @@ export const ToDoList:React.FC<ToDoListProps> = () => {
                         }
                     </div>
                 ))}
+                <div className={styles.ToDoList_completedItems}>
+                    <Title
+                        size={3}
+                        alignment="left"
+                        weight="400"
+                    >
+                        Completed Items
+                    </Title>
+                </div>
+                {completedItems.map(completedItem => (
+                    <div key={completedItem.id}>{completedItem.name}</div>
+                ))
+
+                }
             </div>
         </div>
     )

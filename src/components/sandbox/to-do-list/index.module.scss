@@ -11,9 +11,9 @@
 
     &_item {
         @include padding($y: 4, $x: 0);
-        @include add-flex($display: flex, $flex-direction: row);
+        @include add-flex($display: flex, $flex-direction: row, $align-items: center);
 
-        &_deleteBtn {
+        &_completeBtn {
             cursor: pointer;
             border: .020rem solid #e0e0e0;
             border-radius: 100%;
@@ -30,8 +30,6 @@
         &_name {
             opacity: .7;
             animation: fade 1s linear;
-
-            @include padding($top: 1);
         }
     }
     
@@ -55,7 +53,7 @@
                 text-align: left;
                 opacity: .7;
 
-                @include padding($top: 1, $bottom: 2, $x: 0);
+                @include padding($all: 0);
             }
 
             button {
@@ -66,7 +64,7 @@
                 cursor: pointer;
 
                 @include margin($left: 5);
-                @include padding($y: 2, $x: 6);
+                @include padding($y: 3, $x: 6);
 
                 &:hover {
                     background: #ff385c;
@@ -107,7 +105,7 @@
 
             @include font($size: 2, $weight: 300);
             @include margin($top: 4);
-            @include padding($y: 2, $x: 6);
+            @include padding($y: 3, $x: 6);
 
             &:hover {
                 background: #f71e46;

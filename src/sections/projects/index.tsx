@@ -15,6 +15,10 @@ export const Projects: React.FC<ProjectProps> = (props) => {
       <div className={styles.Projects}>
         <Title 
           size={5}
+          spacing={4}
+          weight="400"
+          alignment="center"
+          
         >
           Projects Section
         </Title>
