@@ -3,10 +3,10 @@
   opacity: 1;
   animation: fade 1s linear;
 
-  @include padding($top: 3, $right: 4, $bottom: 8, $left: 4);
+  @include padding($top: 5);
 
   @include get-min-width-breakpoint(tablet) {
-    @include padding($top: 3, $right: 10, $bottom: 8, $left: 10);
+    @include padding($top: 6);
   }
 }
 

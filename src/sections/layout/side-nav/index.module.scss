@@ -1,0 +1,29 @@
+.SideNav {
+    background: #f6f6f6;
+
+    @include padding($x: 6);
+
+    &_group {
+        border-bottom: 1px solid #dddddd;
+
+        @include padding($top: 4, $bottom: 0);
+
+        &:first-child {
+            @include padding($bottom: 0);
+        }
+    }
+
+    &_title {
+        @include font-weight($weight: 400);
+    }
+
+    &_subtitle {
+        @include font-weight($weight: lighter);
+    }
+
+    h5 {
+        @include margin($bottom: 4);
+
+
+    }
+}

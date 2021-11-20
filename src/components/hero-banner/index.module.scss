@@ -1,0 +1,12 @@
+.HeroBanner {
+    position: relative;
+
+    @include add-flex($display: flex, $justify-content: center);
+    @include padding($x: 3);
+    
+    video {
+        border-radius: 4rem;
+        max-width: 95%;
+        box-shadow: rgba(0,0,0,0.2) 0px 2px 10px 0px;
+    }
+}

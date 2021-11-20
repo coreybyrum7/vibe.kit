@@ -1,0 +1,25 @@
+.Col {
+  @for $i from 1 through 12 {
+    @if $i < 5 {
+      &--mobile--#{$i} {
+        grid-column: span #{$i};
+      }
+    }
+
+    @if $i < 7 {
+      &--tablet--#{$i} {
+        grid-column: span #{$i};
+      }
+    }
+
+    @if $i < 13 {
+      &--desktop--#{$i} {
+        grid-column: span #{$i};
+      }
+    }
+  }
+
+  &__align_vertically {
+    @include add-flex($display: flex, $justify-content: center, $flex-direction: column);
+  }
+}

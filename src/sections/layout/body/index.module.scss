@@ -1,0 +1,5 @@
+.Body {
+    background: #fff;
+    
+    @include padding($left: 6);
+}

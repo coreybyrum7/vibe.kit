@@ -11,18 +11,8 @@ export const Projects: React.FC<ProjectProps> = (props) => {
 
   return (
     visible &&
-    <Section id="projects">
-      <div className={styles.Projects}>
-        <Title 
-          size={5}
-          spacing={4}
-          weight="400"
-          alignment="center"
-          
-        >
-          Projects Section
-        </Title>
-      </div>
+    <Section id="projects" className="Projects">
+      <h2>Projects</h2>
     </Section>
   )
 }

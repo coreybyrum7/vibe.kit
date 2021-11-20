@@ -1,36 +1,73 @@
-export const navItems = [
+export const foundations = [
     {
-        name: 'resume',
-        linkName: 'Resume',
-        href: '/assets/docs/resume.pdf',
-        target: 'blank',
-        type: 'doc',
-        location: '1'
+        name: 'accessibility',
+        displayName: 'Accessibility',
+        type: 'section'
     },
     {
-        name: 'projects',
-        linkName: 'Projects',
-        type: 'section',
-        location: '2'
+        name: 'colors',
+        displayName: 'Colors',
+        type: 'section'
     },
     {
-        name: 'home',
-        linkName: 'Home',
-        type: 'section',
-        location: '3'
+        name: 'typography',
+        displayName: 'Typography',
+        type: 'section'
+    }
+];
+
+export const components = [
+    {
+        type: 'atoms',
+        displayName: 'Atoms',
+        components: [
+            {
+                name: 'buttons',
+                displayName: 'Buttons',
+                type: 'section'
+            },
+            {
+                name: 'icons',
+                displayName: 'Icons',
+                type: 'section'
+            }
+        ]
     },
     {
-        name: 'sandbox',
-        linkName: 'Sandbox',
-        type: 'section',
-        location: '4'
+        type: 'molecules',
+        displayName: 'Molecules',
+        components: [
+            {
+                name: 'tabs',
+                displayName: 'Tabs',
+                type: 'section'
+            },
+            {
+                name: 'accordion',
+                displayName: 'Accordion',
+                type: 'section'
+            }
+        ]
     },
     {
-        name: 'github',
-        linkName: 'Github',
-        type: 'link',
-        href: 'https://github.com/coreybyrum7/portfolio-site',
-        target: 'blank',
-        location: '5'
-    },
+        type: 'organisms',
+        displayName: 'Organisms',
+        components: [
+            {
+                name: 'cards',
+                displayName: 'Cards',
+                type: 'section'
+            },
+            {
+                name: 'headers',
+                displayName: 'Headers',
+                type: 'section'
+            },
+            {
+                name: 'tables',
+                displayName: 'Tables',
+                type: 'section'
+            }
+        ]
+    }
 ];

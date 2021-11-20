@@ -11,20 +11,8 @@ export const Sandbox: React.FC<SandboxProps> = (props) => {
   
   return (
     visible &&
-    <Section id="Sandbox">
-      <div className={styles.Sandbox}>
-        <Title 
-          size={5}
-          spacing={4}
-          weight="400"
-          alignment="center"
-        >
-          Sandbox
-        </Title>
-        <div className={styles.Sandbox_project}>
-          <ToDoList />
-        </div>
-      </div>
+    <Section id="sandbox" className="Sandbox">
+      <h2>Sandbox</h2>
     </Section>
   )
 }

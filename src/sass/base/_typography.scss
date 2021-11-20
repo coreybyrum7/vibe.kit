@@ -1,0 +1,48 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include margin($top: 0);
+}
+
+h1 {
+    @include font(10, normal);
+}
+
+h2 {
+    @include font(8, normal);
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+p {
+
+}
+
+span {
+
+}
+
+ul {
+
+}
+
+li {
+
+}

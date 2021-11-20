@@ -1,71 +1,23 @@
 .NavLink {
-    &_link {        
-        @include add-flex(
-            $display: flex, 
-            $flex-direction: row, 
-            $align-items: center,
-            $align-self: center,
-        );
+    &_link {
+        display: inline-flex;
+        opacity: .5;
+        cursor: pointer;
+        background-color: #f6f6f6;
+        transition: background-color .25s;
 
-        &:not(.NavLink_link_home) {
-            a {
-                @include padding($y: 3, $x: 5);
-            }
+        @include font-weight($weight: normal);
+        @include padding($y: 2, $x: 3);
+
+        &:hover {
+            opacity: 1;
         }
 
-        a {
-            opacity: .6;
-            cursor: pointer;
-        
-            &:first-child {
-                @include padding($left: 0);
-            }
-    
-            &:not(:last-child) {
-                @include padding($right: 6);
-            }
-
-            &:last-child {
-                @include padding($right: 3);
-            }
-    
-            &:hover {
-                opacity: 1;
-            }
-
-            &.NavLink_link_active {
-                opacity: 1;
-            }
-        }
-
-        &_resume,
-        &_projects {
-            @include add-flex($justify-self: flex-start);
-        }
-
-        &_home {
-            @include add-flex($justify-self: center);
-
-            a {
-                @include padding($y: 2);
-
-                svg {
-                    height: 3rem;
-                    width: 3rem;
-    
-                    &:hover {
-                        transform: scale(1.1);
-                        transition-duration: .25s;
-                        transition-timing-function: ease-out;
-                        cursor: pointer;
-                    }
-                }
-            }
-        }
-
-        &_sandbox,
-        &_github {
-            @include add-flex($justify-self: flex-end);
+        &.NavLink_link_active {
+            opacity: 1;
+            color: #fff;
+            background-color: #4c8bf5;
+            border-radius: 6px;
         }
     }
 }
