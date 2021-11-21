@@ -1,6 +1,6 @@
 import styles from './index.module.scss';
 import { Title } from 'src/components';
-import { Icon } from 'src/components/icon';
+import { Icon } from 'src/components/particles/icon';
 import { useState, useEffect } from 'react';
 
 export interface ToDoListProps {

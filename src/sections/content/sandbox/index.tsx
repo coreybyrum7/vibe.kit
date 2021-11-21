@@ -1,6 +1,6 @@
 import styles from './index.module.scss';
 import { Section, Title } from 'src/components'
-import { ToDoList } from 'src/components/sandbox'
+import { ToDoList } from 'src/components/templates/sandbox'
 
 export interface SandboxProps {
   visible: boolean;
