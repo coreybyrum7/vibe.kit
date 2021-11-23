@@ -1,5 +1,5 @@
 import styles from './index.module.scss';
-import { Section, HeroVideo, Grid, Title, Subtitle } from 'src/components'
+import { Section } from 'src/components'
 
 export interface WelcomeProps {
   visible: boolean;

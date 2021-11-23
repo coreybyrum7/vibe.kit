@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { useState } from 'react';
 
 import { foundations, components } from 'src/core/data';
-import { Section, NavLink, Title } from 'src/components'
+import { Section, NavItem } from 'src/components'
 
 import styles from './index.module.scss';
 
@@ -28,7 +28,7 @@ export const SideNav = (props) => {
           <h5 className={styles.SideNav_title}>Foundations</h5>
           {foundations.map(foundation => {
             return (
-              <NavLink
+              <NavItem
                 key={foundation.name}
                 name={foundation.name}
                 displayName={foundation.displayName}
@@ -49,7 +49,7 @@ export const SideNav = (props) => {
                 <h5 className={styles.SideNav_subtitle}>{componentType.displayName}</h5>
                 {componentType.components.map(component => {
                   return (
-                    <NavLink
+                    <NavItem
                       key={component.name}
                       name={component.name}
                       displayName={component.displayName}

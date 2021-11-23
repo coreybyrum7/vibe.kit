@@ -1,0 +1,23 @@
+.NavItem {
+    &_link {
+        display: inline-flex;
+        opacity: .5;
+        cursor: pointer;
+        background-color: #f6f6f6;
+        transition: background-color .25s;
+
+        @include font-weight($weight: normal);
+        @include padding($y: 2, $x: 3);
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &.NavItem_link_active {
+            opacity: 1;
+            color: #fff;
+            background-color: #4c8bf5;
+            border-radius: 6px;
+        }
+    }
+}

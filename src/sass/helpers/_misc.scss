@@ -1,5 +1,0 @@
-@mixin addIfNotNull($style, $value) {
-  @if ($value != '') {
-      #{$style}: $value;
-  }
-}
